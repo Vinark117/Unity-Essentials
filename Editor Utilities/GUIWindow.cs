@@ -122,6 +122,18 @@ namespace VinToolsEditor.Utilities
         #endregion
 
         #region Methods
+        public void Show(EditorWindow window, int WindowID)
+        {
+            //begin windows
+            window.BeginWindows();
+
+            //show the window
+            Show(WindowID, window.position);
+
+            //end windows
+            window.EndWindows();
+        }
+
         public void Show(int WindowID, Rect MainWindowPosition)
         {
             //if not visible ignore
